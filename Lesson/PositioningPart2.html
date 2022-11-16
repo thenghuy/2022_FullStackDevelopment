@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .relative{
+            position: absolute;
+            border: 1px rgb(155, 155, 28) solid;
+            width:500px;
+            height:500px;
+        }
+        .abso{
+            position:relative;
+            width:300px;
+            height:300px;
+            border: 1px solid brown;
+           
+        }
+        .sticky{
+            position: sticky;
+            border: 2px solid green;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative">This is relative
+        <div class="abso">This is absolute</div>
+    </div>
+    <div class="sticky">I am sticky</div>
+</body>
+</html>

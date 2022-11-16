@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text" value="A">
+    <p>Start from : <input type="number" id="startindex" value="0"></p>
+    <p>Start from : <input type="number" id="rndindex" value="1"></p>
+    <p>Result:</p><div id="slice"></div>
+    <button onclick="slicing(text.value,startindex.value,rndindex.value)">Click me</button>
+    <p>Result:</p><div id="upper"></div>
+    <button onclick="upper(text.value)">Click me</button>
+    <p>Result:</p><div id="trimstart"></div>
+    <button onclick="trimstart(text.value)">Click me</button>
+    <p>Result:</p><div id="trimend"></div>
+    <button onclick="trimend(text.value)">Click me</button>
+    <p>Result:</p><div id="beforechange"></div>
+    <p>Result:</p><div id="afterchange"></div>
+    <button onclick="changetype(text.value)">Click me</button>
+    <p>Result:</p><div id="split"></div>
+    <p>Result:</p><div id="typeof"></div>
+    <button onclick="split(text.value)">Click me</button>
+</body>
+<script>
+    function slicing(x,y,z){
+        let s1 = Number(y);
+        let e2 = Number(z);
+        let res= x.slice(s1,e2);
+        document.getElementById("slice").innerHTML=res;
+    }
+    function upper(x){
+        let text = String(x) ;
+        let res = text.toUpperCase();
+        document.getElementById("upper").innerHTML=res;
+    }
+    function trimstart(x){
+        let text = String(x) ;
+        let res = text.trimStart();
+        document.getElementById("trimstart").innerHTML=res;
+    }
+    function trimend(x){
+        let text = String(x) ;
+        let res = text.trimend();
+        document.getElementById("trimend").innerHTML=res;
+    }
+    function trimend(x){
+        let text = String(x) ;
+        let res = text.trimend();
+        document.getElementById("trimend").innerHTML=res;
+    }
+    function changetype(x){
+        document.getElementById("beforechange").innerHTML=typeof x;
+        let text = Number(x);
+        document.getElementById("afterchange").innerHTML=typeof text;
+    }
+    function split(x){
+        let text = String(x);
+        let res = text.split(" ");
+        document.getElementById("split").innerHTML=text.split(" ");
+        document.getElementById("typeof").innerHTML=typeof res;
+    }
+</script>
+</html>

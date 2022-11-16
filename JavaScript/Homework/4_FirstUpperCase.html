@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: SHallow;
+            src: url(SecretHalloween-eZ806.ttf);
+        }
+        *{
+            font-size:1.2em;
+        }
+        body{
+            margin:auto;
+            width: 50%;
+        }
+        section{
+            border:3px solid;
+            width:500px;
+            height:400px;
+            padding: 20px;
+            background-color: #1efa5c1f;
+        }
+        h1{
+            font-size: 1.4em;
+            margin-left:20%;
+            font-family: SHallow;
+            letter-spacing: 3px;
+            color: rgba(226, 43, 171, 0.807);
+        }
+        #result{
+            color: #ADAC2F;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        button{
+            background-color:    #EFFA0C;
+        }
+        #reset{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>First Upper Case</h1>
+<section>
+    <p>Enter your word here :<br> <input type="text" id="text" value=""></p>
+    <p>Answer: <p id="result"></p></p>
+    <button type="submit" onclick="UpperCaseConvert(text.value)">Check!</button>
+    <button id="reset" type="reset" onclick="window.location.reload()">Reset</button>
+</section>
+</body>
+<script>
+   function UpperCaseConvert(x){
+    let afterconvert="";
+    let text = String(x);
+    const arraytext = text.split(" ");
+    for (let i=0;i<arraytext.length;i++){
+       afterconvert =afterconvert+ arraytext[i][0].toUpperCase()+arraytext[i].substring(1,arraytext[i].length)+" ";
+    } 
+    document.getElementById("result").innerHTML=afterconvert;
+   }
+</script>
+</html>

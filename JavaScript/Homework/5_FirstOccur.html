@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+    <p>Enter your text here : <input type="text" id="text" value=""></p>
+    <p id="res"></p>
+    <button onclick="getindex(text.value)">Click me</button>
+</section>
+</body>
+<script>
+    function getindex(x){
+        let text = String(x);
+        let listText = text.split(" ");
+        let res = listText.indexOf("World");
+        if (text===""){
+            alert("Please insert your text!");
+        }else if (!(listText.includes("World"))){
+            alert("It doesnt have in the string!")
+        }
+        else{
+        document.getElementById("res").innerHTML="We can see the word at index  " +res;}
+    }
+</script>
+</html>

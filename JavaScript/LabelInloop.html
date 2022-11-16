@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data=[{
+            Name:"Maika",
+            Age : 45,
+            hobby:["readbf book","cycling","basketball"]
+        },{
+            Name:"Emma",
+            Age : 45,
+            hobby:["Play Football","gardening","Walk the dog"]
+        },{
+            Name:"Alis",
+            Age : 45,
+            hobby:["read book","cycling","Walk the dog"]
+        },{
+            Name:"Megan",
+            Age : 45,
+            hobby:["Cooking","on trip","basketball"]
+        },
+    ];
+    outerloop:
+        for(let i=0;i<data.length;i++){
+            innerloop:
+            for(let j=0;j<data[i].hobby.length;j++){
+                if (data[i].hobby[j]==="read book"){//if it equal read book it will stop and continue
+                    break outerloop;
+                }else{
+                document.write(data[i].hobby[j]);
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

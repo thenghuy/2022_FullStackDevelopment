@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>p{
+            background-color: aqua;
+        }
+        div+p{
+            background-color: aquamarine;
+        }
+        div~p{
+            background-color: blue;
+        }
+        div section p{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is paragraph 1. inside div</p>
+        <p>This is paragraph 2. inside div</p>
+        <p>This is paragraph 3. inside div</p>
+        <section>
+            <p>This is paragraph 6. inside div</p>
+        </section>
+    </div>
+    <p>This is paragraph 4. not inside div</p>
+    <p>This is paragraph 5. not inside div</p>
+</body>
+</html>

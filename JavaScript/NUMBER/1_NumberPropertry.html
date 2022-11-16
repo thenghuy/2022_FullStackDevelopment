@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="maxvalue"></p>
+    <p id="MinValue"></p>
+    <p id="nan"></p>
+    <p id="negInfi"></p>
+    <p id="positiveInfi"></p>
+    <p id="proto"></p>
+    <p id="construct"></p>
+    <button onclick="showValue()">Click Me</button>
+</body>
+<script>
+    function showValue(){
+        let max = Number.MAX_VALUE;
+        let min = Number.MIN_VALUE;
+        let month =-1;
+        if ((month <1)||(month>12)){
+                  month = Number.NaN;
+                  alert("Month must be from 1 to 12;");
+        }else{
+            document.getElementById("nan").innerHTML=month;
+        }
+        let Negin= Number.NEGATIVE_INFINITY;
+        let posmin = Number.POSITIVE_INFINITY;
+        let proto = Number.prototype;
+        document.getElementById("proto").innerHTML="proto="+proto;
+        document.getElementByID("negInfi").innerHTML="NegInfinity="+Negin;
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = 0.564356;
+        var num2 = 569.22329;
+        document.writeln(num1.toExponential(0));
+        document.writeln(num1.toExponential(1));
+        document.writeln(num1.toExponential(2));
+        document.writeln(num2.toExponential(0));
+        document.writeln(num2.toExponential(1));
+        document.writeln(num2.toExponential(2));
+
+        document.write(num1.toFixed());
+        document.write(num2.toFixed());
+
+        document.write("Precision:"+num1.toPrecision(3)+"  ");//convert from multi digit into desire digit.
+
+        document.write(num1.toLocaleString());
+        document.write(typeof num1);
+    </script>
+</body>
+</html>

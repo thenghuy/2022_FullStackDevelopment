@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Book(bookname,author,price){
+            this.bookname=bookname;
+            this.author=author;
+            this.price=price;
+            document.write( "This is <b>"+this.bookname+"</b> from "+this.author+" ( "+this.price+"$ ).");
+        }
+        var myBook = new Book("A Race for the Future","Marina Mogilner","45.5");
+    </script>
+</body>
+</html>

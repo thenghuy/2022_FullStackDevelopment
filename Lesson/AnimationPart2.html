@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 3px solid;
+            width:300px;
+            height:140px;
+            position: relative;
+            animation-name: box;
+            animation-duration: 6s;
+            animation-iteration-count: 3;
+        }
+        #div1{animation-timing-function: ease;}
+        #div2{animation-timing-function: ease-in-out;}
+        @keyframes box{
+            from{left:0px}to{left:600px}
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animation</h1>
+
+<p>The animation-timing-function property specifies the speed curve of the animation. The following example shows some of the different speed curves that can be used:</p>
+
+<div id="div1">linear</div>
+<div id="div2">ease</div>
+<div id="div3">ease-in</div>
+<div id="div4">ease-out</div>
+<div id="div5">ease-in-out</div>
+</body>
+</html>

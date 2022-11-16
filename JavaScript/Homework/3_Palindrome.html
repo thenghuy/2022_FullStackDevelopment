@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: Moneterey;
+            src: url(MontereyFLF-Italic.ttf);
+        }
+        @font-face {
+            font-family: SHallow;
+            src: url(SecretHalloween-eZ806.ttf);
+        }
+        *{
+            font-size: 1.2em;
+        }
+        body{
+            margin: auto;
+            width: 50%;
+        }
+        section{
+            border: solid 1px;
+            width:600px;
+            height:400px;
+            padding: 20px; 
+            background-color: beige;
+        }
+        h1{
+            font-family: Moneterey;
+            font-size: 2em;
+            margin-left:20%;
+        }
+        button{
+            background-color: rgba(215, 250, 229, 0.771);
+        }
+        #result{
+            font-family: Shallow;
+            color:blue;
+        }
+        #reset{
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Checking Palindrome</h1>
+    <section>
+    <p>Enter the word here: <input type="text" id="text" value=""></p>
+    <p>Answer: <p id="result"></p></p>
+    <button type="submit" onclick="IsPalindrome(text.value)">Check!</button>
+    <button id="reset" type="reset" onclick="window.location.reload()">Reset</button>
+    </section>
+</body>
+<script>
+    function IsPalindrome(x){
+        let text = String (x);
+        let check = "";
+        for (let i=text.length;i>=0;i--){
+            check=check+(text.charAt(i));
+        }
+        if(check.match(text)){
+            document.getElementById("result").innerHTML="It is Palindrome";
+        }
+        else{
+            document.getElementById("result").innerHTML="It is not Palindrome";
+        }
+    }
+        </script>
+</html>

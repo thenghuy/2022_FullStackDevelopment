@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.4em;
+            background-color: aquamarine;
+        }
+        div{
+            color: rgb(22, 96, 224);
+            font-size: 1.6em;
+        }
+        button{
+            background-color: brown;
+            color: rgb(214, 226, 43);
+        }
+    </style>
+</head>
+<body>
+    <p> Enter your Number: <input type="number" id="num" value></p>
+    <p> Answer : <div id="reverse"></div></p>
+    <button type="submit" onclick="Reversenum(num.value)">Click to reverse me!</button>
+    <button type="reset" onclick="window.location.reload()">Reset</button>
+</body>
+<script>
+    function Reversenum(x){
+      let y="";
+      let num = Number (x);
+     while(true){
+     y = y+ String(num%10);
+     num=Math.trunc(num/10);
+     if(num===0){
+        document.getElementById("reverse").innerHTML=y;
+        break;
+     }
+    }
+    }
+
+</script>
+</html>
