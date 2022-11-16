@@ -1,3 +1,6 @@
 [submodule "Assignment/Assignment"]
 	path = Assignment/Assignment
 	url = https://github.com/thenghuy/2022_FullStackDevelopment.git
+[submodule "Assignment/Assignment1"]
+	path = Assignment/Assignment1
+	url = https://github.com/thenghuy/2022_FullStackDevelopment.git
